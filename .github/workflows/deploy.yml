@@ -51,5 +51,5 @@ jobs:
       - name: Update Lambda
         run: |
           aws lambda update-function-code \
-            --function-name lambda-docker-function \
+            --function-name docker-on-lambda \
             --image-uri $ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/$ECR_REPOSITORY:${{ steps.vars.outputs.TAG }}
